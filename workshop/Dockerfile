@@ -18,10 +18,4 @@ ENV SHELL=/bin/bash
 WORKDIR /home/
 ADD . /home/
 
-# Cleanup
-RUN rm -rf /tmp/pip && \
-rm -rf /root/.cache && \
-apt-get clean && \
-rm -rf /var/lib/apt/lists/*
-
 CMD jupyter lab --allow-root
